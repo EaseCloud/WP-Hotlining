@@ -151,7 +151,7 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script(
         'wp-hotlinking',                                // handle
         plugin_dir_url(__FILE__)
-            ."js/hotlinking.js?hash=$hash",            // source
+            ."js/hotlinking.js?hash=$hash",             // source
         array('jquery'),                                // dependence
         WHL_VERSION,                                    // version
         true                                            // in_footer
