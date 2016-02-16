@@ -2,7 +2,8 @@ jQuery(function($) {
     var whl_domains = [
         'http://\\w\\.hiphotos\\.baidu\\.com'
     ];
-    var source_url = '/wp-admin/admin-ajax.php?action=hotlink_img&url=';
+    var source_url = (window.wp_site_url || '/')
+        + '/wp-admin/admin-ajax.php?action=hotlink_img&url=';
 
     //var i, domain;
     //for(i = 0; i < whl_domains.length; ++i) {

@@ -16,7 +16,6 @@ define('WHL_DOMAIN', 'wp_hot_linking');
 define('WHL_OPTION_PAGE', 'options-hot-linking');
 define('WHL_VERSION', '0.1');
 
-//var_dump(add_query_arg(array('action' => 'wechat_callback'), home_url('/wp-admin/admin-ajax.php')));
 
 /**
  * 翻译支持
@@ -182,3 +181,8 @@ function grab_image($url){
 }
 
 
+// 为 js 上下文加入 siteurl 参数
+add_action('wp_head', function() {
+    $siteurl = get_site_url();
+    echo "<script>window.wp_site_url='$siteurl';</script>";
+});
